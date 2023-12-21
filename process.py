@@ -7,23 +7,27 @@ import logging # Import Logging-Bibliothek zum Erstellen einer Logdatei
 class Process():
         
     class __init__(): # Ausführung beim Programmaufruf
-                                                                                                        # DD-MM-YYYY_HH-MM-SS
-        time = datetime.now(  ).strftime("%d-%m-%Y_%H-%M-%S") # Erstellung der aktuell Uhrzeit im Format "03-10-2022_20-13-23"
+                                                                                          # dd-mm-YYYY_HH-MM-SS
+        time = datetime.now(  ).strftime("%d-%m-%Y--%H:%M:%S") # Erstellung der aktuell Uhrzeit im Format "03-10-2022_20-13-23" 
+        print(time)
         year = datetime.now().strftime("%Y") # Erstellung des Jahres als Text
-        month = datetime.now().strftime("%m-%Y") # Erstellung des Monates und Jahres als Text
+        #print(year)
+        month = datetime.now().strftime("%Y-%m") # Erstellung des Monates und Jahres als Text
+        print(month)
         path1 = '/home/pi/Desktop/Birdwatcher' # Ordnerpfad 1
         path2 = '/home/pi/Desktop/Birdwatcher/%s' %year #Ordnerpfad 2
         path3 = '/home/pi/Desktop/Birdwatcher/%s/%s' % (year, month) # Ordnerpfad 3
         pFile = path3 +'/image_'+ time + '.jpg' #Dateipfad für die Aufnahme
         filename = time # Dateiname für den Mail-Versand
-        
+        print("account")
         pSubject = 'Vogelbeobachtung ' + time # Betreff der E-Mail
-        pFrom = [MAILADRESSE-VON] # Absenderadresse der Mail [zu ergänzen]
-        pTo = [MAILADRESSE-ZU] # Empfaengeradresse [zu ergänzen]
-        pContent = [MAILINHALT] # E-Mailtext [zu ergänzen]
-        host = [SMTP-URL] # SMTP-Url des Mailproviders [zu ergänzen]
-        username = [BENUTZERNAME] # Benutzername des Mail-Kontos
-        password = [PASSWORT] # Passwort des Mail-Kontos
+        pFrom = 'mohamed.salheen@hsbi.de' # Absenderadresse der Mail [zu ergänzen]
+        pTo = 'demerdregon@gmail.com' # Empfaengeradresse [zu ergänzen]
+        Cc = 'Andreas.Kirsch@hsbi.de' # Empfaengeradresse(ZUSATZ) [zu ergänzen]
+        pContent = 'Birdwatcher' # E-Mailtext [zu ergänzen]
+        host = 'smtp.hsbi.de' # SMTP-Url des Mailproviders [zu ergänzen]
+        Port = 587 # Port der SMTP-URL
+        password = '' # Passwort des Mail-Kontos
         
         pTransfer = '/home/pi/Desktop/Birdwatcher/transfer' # Ordnerpfad für den Transferordner
         logging.basicConfig(filename="process_log.txt", format="%(asctime)s %(message)s") # Erstellung und Konfiguration der Log-Datei
@@ -32,17 +36,10 @@ class Process():
         folder.createFolder(path1) # Erstellung des Orners an Pfad 1
         folder.createFolder(path2) # Erstellung des Orners an Pfad 2
         folder.createFolder(path3) # Erstellung des Orners an Pfad 3
-        folder.createFolder(pTransfer) # Erstellung des Transferordners
-             
+        folder.createFolder(pTransfer) # Erstellung des Transferordners   
         camera.takePhoto(pFile) # Aufnahme und Speicherung unter dem Dateipfad
-                
         folder.transfer(pFile, pTransfer) # Kopieren der Aufnahme in den Transferordner
-                
-        transfer.sendMail(pSubject, pFrom, pTo, pContent, pTransfer, filename, host, username, password) # Versand der Datei per E-Mail in einer .zip-Datei
-       
-            
-        
-
+        transfer.sendMail(pSubject, pFrom, pTo, Cc, pContent, pTransfer, filename, host, Port, password) # Versand der Datei per E-Mail in einer .zip-Datei
         
         
 

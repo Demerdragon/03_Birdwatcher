@@ -17,3 +17,4 @@ class camera():
             logging.error(a) #Logging, falls Exceptions auftreten
         
     
+

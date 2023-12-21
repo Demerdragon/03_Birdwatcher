@@ -5,7 +5,7 @@ Requires=network-online.target # Benoetigt (aktive Internetverbindung)
 
 [Service]
 Type=idle
-ExecStart=python /home/pi/Desktop/Code1/birdwatcher/process.py # Ausfuehren der Datei (process.py)
+ExecStart=python /home/pi/Desktop/03_Birdwatcher/process.py # Ausfuehren der Datei (process.py)
 
 [Install]
 WantedBy=multi-user.target # Ausführen nach (sobald alle Nichtgrafikelemente geladen sind)
