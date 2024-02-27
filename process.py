@@ -13,21 +13,25 @@ class Process():
         year = datetime.now().strftime("%Y") # Erstellung des Jahres als Text
         #print(year)
         month = datetime.now().strftime("%Y-%m") # Erstellung des Monates und Jahres als Text
+        day = datetime.now().strftime("%m-%d") # Erstellung des Monates und Jahres als Text
+        hour = datetime.now().strftime("Stunde-%H") # Erstellung des Monates und Jahres als Text
         print(month)
         path1 = '/home/pi/Desktop/Birdwatcher' # Ordnerpfad 1
         path2 = '/home/pi/Desktop/Birdwatcher/%s' %year #Ordnerpfad 2
         path3 = '/home/pi/Desktop/Birdwatcher/%s/%s' % (year, month) # Ordnerpfad 3
-        pFile = path3 +'/image_'+ time + '.jpg' #Dateipfad für die Aufnahme
+        path4 = '/home/pi/Desktop/Birdwatcher/%s/%s/%s' % (year, month, day) # Ordnerpfad 4
+        path5 = '/home/pi/Desktop/Birdwatcher/%s/%s/%s/%s' % (year, month, day,hour) # Ordnerpfad 5
+        pFile = path5 +'/image_'+ time + '.jpg' #Dateipfad für die Aufnahme
         filename = time # Dateiname für den Mail-Versand
         print("account")
         pSubject = 'Vogelbeobachtung ' + time # Betreff der E-Mail
         pFrom = 'mohamed.salheen@hsbi.de' # Absenderadresse der Mail [zu ergänzen]
-        pTo = 'demerdregon@gmail.com' # Empfaengeradresse [zu ergänzen]
-        Cc = 'Andreas.Kirsch@hsbi.de' # Empfaengeradresse(ZUSATZ) [zu ergänzen]
+        pTo = 'birdwatcher.ium@hsbi.de' # Empfaengeradresse [zu ergänzen]
+        Cc = '' # Empfaengeradresse(ZUSATZ) [zu ergänzen]
         pContent = 'Birdwatcher' # E-Mailtext [zu ergänzen]
         host = 'smtp.hsbi.de' # SMTP-Url des Mailproviders [zu ergänzen]
         Port = 587 # Port der SMTP-URL
-        password = '' # Passwort des Mail-Kontos
+        password = 'Diegangistdasbeste12' # Passwort des Mail-Kontos
         
         pTransfer = '/home/pi/Desktop/Birdwatcher/transfer' # Ordnerpfad für den Transferordner
         logging.basicConfig(filename="process_log.txt", format="%(asctime)s %(message)s") # Erstellung und Konfiguration der Log-Datei
@@ -36,6 +40,8 @@ class Process():
         folder.createFolder(path1) # Erstellung des Orners an Pfad 1
         folder.createFolder(path2) # Erstellung des Orners an Pfad 2
         folder.createFolder(path3) # Erstellung des Orners an Pfad 3
+        folder.createFolder(path4) # Erstellung des Orners an Pfad 3
+        folder.createFolder(path5) # Erstellung des Orners an Pfad 3
         folder.createFolder(pTransfer) # Erstellung des Transferordners   
         camera.takePhoto(pFile) # Aufnahme und Speicherung unter dem Dateipfad
         folder.transfer(pFile, pTransfer) # Kopieren der Aufnahme in den Transferordner

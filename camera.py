@@ -13,6 +13,7 @@ class camera():
             sleep(2) #Warten (2 Sekunden), für die Lichtverhältnisse
             camera.capture(pFile) #Aufnahme des Fotos an den vorgegebenen Speicherort
             camera.stop_preview() #Stop der Kamera
+            print("bild")
         except Exception as a:
             logging.error(a) #Logging, falls Exceptions auftreten
         

@@ -54,3 +54,26 @@
 2023-12-21 19:35:19,047 [Errno 2] No such file or directory: '/home/pi/Desktop/Birdwatcher/transfer'
 2023-12-21 19:35:19,048 [Errno 2] No such file or directory: '/home/pi/Desktop/Birdwatcher/transfer.zip'
 2023-12-21 19:37:10,619 name 'Andreas' is not defined
+2024-01-23 12:17:42,363 [Errno -2] Name or service not known
+2024-01-23 12:22:46,031 (535, b'5.7.3 Authentication unsuccessful')
+2024-01-23 12:24:47,790 (535, b'5.7.3 Authentication unsuccessful')
+2024-01-23 12:34:25,899 [Errno -2] Name or service not known
+2024-01-23 12:34:46,654 [Errno -2] Name or service not known
+2024-01-23 12:39:06,359 [Errno -2] Name or service not known
+2024-01-23 12:39:14,914 [Errno -2] Name or service not known
+2024-01-23 12:39:21,420 [Errno -2] Name or service not known
+2024-01-23 12:39:28,348 [Errno -2] Name or service not known
+2024-01-23 12:57:19,175 [Errno 2] No such file or directory: '/home/pi/Desktop/Birdwatcher/2024/2024-01/23'
+2024-01-23 12:57:21,416 [Errno 2] No such file or directory: '/home/pi/Desktop/Birdwatcher/2024/2024-01/23/image_23-01-2024--12:57:19.jpg'
+2024-01-23 12:57:21,419 [Errno 2] No such file or directory: '/home/pi/Desktop/Birdwatcher/2024/2024-01/23/image_23-01-2024--12:57:19.jpg'
+2024-01-23 12:57:21,545 [Errno -2] Name or service not known
+2024-01-23 12:57:45,271 [Errno 2] No such file or directory: '/home/pi/Desktop/Birdwatcher/2024/2024-01/23'
+2024-01-23 12:57:47,510 [Errno 2] No such file or directory: '/home/pi/Desktop/Birdwatcher/2024/2024-01/23/image_23-01-2024--12:57:45.jpg'
+2024-01-23 12:57:47,512 [Errno 2] No such file or directory: '/home/pi/Desktop/Birdwatcher/2024/2024-01/23/image_23-01-2024--12:57:45.jpg'
+2024-01-23 12:57:47,641 [Errno -2] Name or service not known
+2024-01-23 12:59:38,947 [Errno -2] Name or service not known
+2024-01-23 13:00:04,955 [Errno -2] Name or service not known
+2024-01-23 13:04:52,430 [Errno -2] Name or service not known
+2024-01-23 13:06:08,113 [Errno -2] Name or service not known
+2024-02-27 14:47:17,347 Camera is not enabled. Try running 'sudo raspi-config' and ensure that the camera has been enabled.
+2024-02-27 14:47:17,348 [Errno 2] No such file or directory: '/home/pi/Desktop/Birdwatcher/2024/2024-02/02-27/Stunde-14/image_27-02-2024--14:47:17.jpg'
