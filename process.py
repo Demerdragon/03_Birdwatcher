@@ -25,7 +25,7 @@ class Process():
         filename = time # Dateiname für den Mail-Versand
         print("account")
         pSubject = 'Vogelbeobachtung ' + time # Betreff der E-Mail
-        pFrom = 'mohamed.salheen@hsbi.de' # Absenderadresse der Mail [zu ergänzen]
+        pFrom = 'max.musterman@hsbi.de' # Absenderadresse der Mail [zu ergänzen]
         pTo = 'birdwatcher.ium@hsbi.de' # Empfaengeradresse [zu ergänzen]
         Cc = '' # Empfaengeradresse(ZUSATZ) [zu ergänzen]
         pContent = 'Birdwatcher' # E-Mailtext [zu ergänzen]
