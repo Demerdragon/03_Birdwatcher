@@ -31,7 +31,7 @@ class Process():
         pContent = 'Birdwatcher' # E-Mailtext [zu ergänzen]
         host = 'smtp.hsbi.de' # SMTP-Url des Mailproviders [zu ergänzen]
         Port = 587 # Port der SMTP-URL
-        password = 'Diegangistdasbeste12' # Passwort des Mail-Kontos
+        password = '' # Passwort des Mail-Kontos
         
         pTransfer = '/home/pi/Desktop/Birdwatcher/transfer' # Ordnerpfad für den Transferordner
         logging.basicConfig(filename="process_log.txt", format="%(asctime)s %(message)s") # Erstellung und Konfiguration der Log-Datei
